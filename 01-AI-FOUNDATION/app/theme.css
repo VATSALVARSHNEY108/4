@@ -1,0 +1,121 @@
+/* app/theme.css */
+:root {
+  /* Light Mode */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f7f4;
+  --bg-tertiary: #f0ede8;
+  --text-primary: #111111;
+  --text-secondary: #5a5a5a;
+  --text-tertiary: #909090;
+  --border: #e5e0d8;
+  --accent: #e8640a; /* orange */
+  --accent-bg: #fff4ed;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1c1c1c;
+  --text-primary: #f0f0f0;
+  --text-secondary: #999999;
+  --text-tertiary: #555555;
+  --border: #222222;
+  --accent: #012bea; /* blue */
+  --accent-bg: rgba(1, 43, 234, 0.08);
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Outfit:wght@400;500&display=swap');
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', serif;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Card base */
+.card {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0;
+}
+
+/* Formula card */
+.formula-card {
+  background: var(--accent-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem;
+}
+
+/* Code block */
+.code-block {
+  background: var(--bg-secondary);
+  font-family: 'JetBrains Mono', monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  position: relative;
+}
+
+code {
+  color: var(--text-secondary);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-number {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+/* Slider */
+input[type="range"] {
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+// app/globals.css
+@import "tailwindcss";
+
+/* Base styles */
+html, body, #__next {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
